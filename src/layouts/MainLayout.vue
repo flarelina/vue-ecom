@@ -12,10 +12,8 @@
         />
 
         <q-toolbar-title>
-          Quasar App
+          E-COM
         </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 
@@ -25,13 +23,36 @@
       bordered
       content-class="bg-grey-1"
     >
-      <q-list>
-        <q-item-label header class="text-grey-8">Essential Links</q-item-label>
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
+      <q-list padding class="text-primary">
+        <q-item to="/">
+          <q-item-section avatar>
+            <q-icon name="home" />
+          </q-item-section>
+
+          <q-item-section>
+            <q-item-label>Home</q-item-label>
+          </q-item-section>
+        </q-item>
+
+        <q-item to="/list">
+          <q-item-section avatar>
+            <q-icon name="list" />
+          </q-item-section>
+
+          <q-item-section>
+            <q-item-label>List</q-item-label>
+          </q-item-section>
+        </q-item>
+
+        <q-item to="/create">
+          <q-item-section avatar>
+            <q-icon name="create" />
+          </q-item-section>
+
+          <q-item-section>
+            <q-item-label>Create</q-item-label>
+          </q-item-section>
+        </q-item>
       </q-list>
     </q-drawer>
 
@@ -59,7 +80,7 @@ export default {
           title: 'Docs',
           caption: 'quasar.dev',
           icon: 'school',
-          link: 'https://quasar.dev'
+          link: '/list'
         },
         {
           title: 'Github',
