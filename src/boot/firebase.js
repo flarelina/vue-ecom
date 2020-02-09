@@ -9,14 +9,15 @@ import "firebase/database";
 
 // Your web app's Firebase configuration
 var firebaseConfig = {
-	apiKey: "AIzaSyBxXdF6BvEXySplg61WNyDcp6mksmW40zE",
-	authDomain: "e-com-ca907.firebaseapp.com",
-	databaseURL: "https://e-com-ca907.firebaseio.com",
-	projectId: "e-com-ca907",
-	storageBucket: "e-com-ca907.appspot.com",
-	messagingSenderId: "629284978980",
-	appId: "1:629284978980:web:03d268ef5ccf47b5e033b1"
+	apiKey: "AIzaSyA8Aha9MW0qLJZHUI1e3lyWiZP_L3GpdaQ",
+	authDomain: "e-com-a2071.firebaseapp.com",
+	databaseURL: "https://e-com-a2071.firebaseio.com",
+	projectId: "e-com-a2071",
+	storageBucket: "e-com-a2071.appspot.com",
+	messagingSenderId: "544427837944",
+	appId: "1:544427837944:web:0254d742b560cef951ae0d"
 };
+
 // Initialize Firebase
 let firebaseApp = firebase.initializeApp(firebaseConfig);
 let firebaseAuth = firebaseApp.auth()
