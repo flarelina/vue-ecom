@@ -21,6 +21,12 @@
     <q-page-container>
       <router-view />
     </q-page-container>
+
+
+     <!--FOOTER-->
+     <div class="landing__footer">
+         Developed By <b>Yours Truly</b>
+     </div>
   </q-layout>
 </template>
 

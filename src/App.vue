@@ -9,3 +9,9 @@ export default {
   name: 'App'
 }
 </script>
+
+<style lang="scss">
+.body {
+  font-family: 'Poppins', sans-serif;
+}
+</style>

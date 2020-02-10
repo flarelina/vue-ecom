@@ -1,15 +1,15 @@
 .landing {
-    color: grey;
+    color: #6b6b6b;
     background-color: white;
 
     &__header {
         background-color: white;
-        padding: 0px 10px 0px 10px;
 
         .toolbar {
+            padding: 0px 20px 0px 20px;
             background-color: white;
             border-bottom: 1px solid rgba(226, 226, 226, 0.55);
-            height: 60px;
+            height: 65px;
 
             &--logo {
                 width: 160px;
@@ -19,5 +19,11 @@
                 font-size: 16px;
             }
         }
+    }
+
+    &__footer {
+        border-top: 1px solid rgba(226, 226, 226, 0.55);
+        text-align: center;
+        padding: 20px;
     }
 }
