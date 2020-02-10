@@ -1,0 +1,23 @@
+.landing {
+    color: grey;
+    background-color: white;
+
+    &__header {
+        background-color: white;
+        padding: 0px 10px 0px 10px;
+
+        .toolbar {
+            background-color: white;
+            border-bottom: 1px solid rgba(226, 226, 226, 0.55);
+            height: 60px;
+
+            &--logo {
+                width: 160px;
+            }
+
+            &--nav {
+                font-size: 16px;
+            }
+        }
+    }
+}
