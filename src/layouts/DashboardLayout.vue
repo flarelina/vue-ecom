@@ -19,7 +19,7 @@
         <q-page-container class="dashboard__nav">
             <!--NAVIGATION -->
             <q-page class="page">
-                <divd class="row q-gutter-md">
+                <div class="row q-gutter-md">
                     <q-card class="side col-3">
                         <q-card-section class="side">
                             <!--AVATAR-->
@@ -48,10 +48,10 @@
 
                     <q-card class="content col">
                         <q-card-section>
-
+                            <router-view></router-view>
                         </q-card-section>
                     </q-card>
-                </divd>
+                </div>
             </q-page>
         </q-page-container>
 
