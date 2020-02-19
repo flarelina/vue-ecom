@@ -17,10 +17,12 @@
 </template>
 
 <script>
+  import ItemModal from "./ItemModal";
+
   export default {
     name: "ItemsPage",
     components: {
-      ItemModal: async () => import("./ItemModal")
+      ItemModal
     },
     methods: {
       showItemModal() {

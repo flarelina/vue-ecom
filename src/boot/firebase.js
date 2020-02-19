@@ -32,7 +32,6 @@ else {
     FUNCTIONS  = Firebase.app().functions('us-central1');
 }
 
-console.log(env('APP_MODE') + ' mode');
 
 const DB         = Firebase.firestore();
 const AUTH       = Firebase.auth();

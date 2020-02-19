@@ -33,14 +33,14 @@
                             <div class="side__list">
                                 <q-list class="rounded-borders text-primary">
                                     <q-item clickable v-ripple active-class="my-menu-link"
-                                            v-for="item in $options.menu" :key="item.key">
+                                            v-for="item in $options.menu" :key="item.key"
+                                            @click="goTo(item.routeName)">
                                         <q-item-section avatar>
-                                            <q-icon name="delete" />
+                                            <q-icon :name="item.icon" />
                                         </q-item-section>
 
                                         <q-item-section>{{item.label}}</q-item-section>
                                     </q-item>
-
                                 </q-list>
                             </div>
                         </q-card-section>
@@ -68,10 +68,15 @@
 
     export default {
         name: 'DashboardLayout',
+        methods: {
+          goTo(routeName) {
+            this.$router.push({name: routeName})
+          }
+        },
         menu: [
-            {label: "Account" , key: "account"  , icon: ""  , routeName: ""},
-            {label: "Items"   , key: "items"    , icon: ""  , routeName: ""},
-            {label: "Orders"  , key: "orders"   , icon: ""  , routeName: ""}
+            {label: "Account" , key: "account"  , icon: "account_circle"  , routeName: ""},
+            {label: "Items"   , key: "items"    , icon: "fas fa-cubes"    , routeName: "dashboard-items"},
+            {label: "Orders"  , key: "orders"   , icon: "fas fa-list"     , routeName: ""}
         ]
     }
 </script>
