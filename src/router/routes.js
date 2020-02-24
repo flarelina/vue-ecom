@@ -12,6 +12,7 @@ const routes = [
   },
   {
     path: '/dashboard',
+    name: 'dashboard',
     component: () => import('layouts/DashboardLayout.vue'),
     children: [
       { path: 'items', name: 'dashboard-items', component: () => import('pages/dashboard/items/ItemsPage.vue') }

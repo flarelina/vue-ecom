@@ -9,7 +9,7 @@
                 </q-toolbar-title>
 
                 <div class="toolbar--nav">
-                    <b>
+                    <b class="cursor-pointer" @click="logout">
                         <span>Logout</span>
                     </b>
                 </div>
@@ -23,7 +23,7 @@
                     <q-card class="side col-3">
                         <q-card-section class="side">
                             <!--AVATAR-->
-                            <q-avatar size="100px" font-size="52px" color="teal" text-color="white" icon="directions" />
+                            <q-avatar size="100px" font-size="52px" color="grey" text-color="white" icon="directions" />
 
                             <!--VENDOR INFO-->
                             <div class="q-pt-md text-bold">John Doe</div>
@@ -31,15 +31,18 @@
 
                             <!--LIST-->
                             <div class="side__list">
-                                <q-list class="rounded-borders text-primary">
-                                    <q-item clickable v-ripple active-class="my-menu-link"
+                                <q-list class="rounded-borders">
+                                    <q-item clickable v-ripple
+                                            :class="$route.name === item.routeName ? 'active' : ''"
                                             v-for="item in $options.menu" :key="item.key"
                                             @click="goTo(item.routeName)">
                                         <q-item-section avatar>
                                             <q-icon :name="item.icon" />
                                         </q-item-section>
 
-                                        <q-item-section>{{item.label}}</q-item-section>
+                                        <q-item-section>
+                                            <span>{{item.label}}</span>
+                                        </q-item-section>
                                     </q-item>
                                 </q-list>
                             </div>
@@ -71,6 +74,10 @@
         methods: {
           goTo(routeName) {
             this.$router.push({name: routeName})
+          },
+          logout() {
+            // Insert logout logic here
+            this.$router.push({name: 'landing'})
           }
         },
         menu: [

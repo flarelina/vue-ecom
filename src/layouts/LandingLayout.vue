@@ -9,11 +9,20 @@
         </q-toolbar-title>
 
         <div class="toolbar--nav">
-           <b>
+           <b v-if="false">
                <span>Register</span>
                <span class="q-px-md">|</span>
                <span>Login</span>
            </b>
+
+            <q-btn flat @click="$router.push({name: 'dashboard'})">
+                <q-avatar size="30px">
+                    <img :src="'https://img.icons8.com/plasticine/2x/user.png'">
+                </q-avatar>
+                <span class="q-ml-sm">
+                    John Doe
+                </span>
+            </q-btn>
         </div>
       </q-toolbar>
     </q-header>
