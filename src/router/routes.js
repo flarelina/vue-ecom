@@ -12,10 +12,12 @@ const routes = [
   },
   {
     path: '/dashboard',
-    name: 'dashboard',
     component: () => import('layouts/DashboardLayout.vue'),
     children: [
-      { path: 'items', name: 'dashboard-items', component: () => import('pages/dashboard/items/ItemsPage.vue') }
+      { path: ''         , name: 'dashboard'          , component: () => import('pages/dashboard/MainPage.vue') },
+      { path: 'account'  , name: 'dashboard-account'  , component: () => import('pages/dashboard/account/AccountPage.vue') },
+      { path: 'items'    , name: 'dashboard-items'    , component: () => import('pages/dashboard/items/ItemsPage.vue') },
+      { path: 'orders'   , name: 'dashboard-orders'   , component: () => import('pages/dashboard/orders/OrdersPage.vue') }
     ]
   }
 ];

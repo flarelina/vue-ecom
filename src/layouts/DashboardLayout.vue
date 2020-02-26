@@ -81,9 +81,10 @@
           }
         },
         menu: [
-            {label: "Account" , key: "account"  , icon: "account_circle"  , routeName: ""},
-            {label: "Items"   , key: "items"    , icon: "fas fa-cubes"    , routeName: "dashboard-items"},
-            {label: "Orders"  , key: "orders"   , icon: "fas fa-list"     , routeName: ""}
+            {label: "Dashboard" , key: "account"  , icon: "dashboard"       , routeName: "dashboard"},
+            {label: "Account"   , key: "account"  , icon: "account_circle"  , routeName: "dashboard-account"},
+            {label: "Items"     , key: "items"    , icon: "fas fa-cubes"    , routeName: "dashboard-items"},
+            {label: "Orders"    , key: "orders"   , icon: "fas fa-list"     , routeName: "dashboard-orders"}
         ]
     }
 </script>
